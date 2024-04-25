@@ -1,0 +1,29 @@
+{
+    "ref": "ref-1",
+    "discription": "discription-1",
+    "magasinSource": {"id": "1"},
+    "magasinDest": {"id": "1"},
+
+    "operationStockDetails": [
+        {
+            "qte":"10",
+            "produit":{"id": "1"}
+        },
+        {
+            "qte":"20",
+            "produit":{"id": "2"}
+        },
+        {
+            "qte":"30",
+            "produit":{"id": "3"}
+        }
+    ]
+}
+
+
+
+
+
+
+
+

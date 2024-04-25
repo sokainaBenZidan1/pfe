@@ -1,0 +1,17 @@
+{
+    "qteCalculee": "#number",
+    "qteStock": "#number",
+    "ecart": "#number",
+    "magasin": "#string",
+    "produit": {"id": "#number"},
+    "inventaire": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

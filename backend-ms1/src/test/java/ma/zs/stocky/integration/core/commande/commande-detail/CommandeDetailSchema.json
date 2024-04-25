@@ -1,0 +1,15 @@
+{
+    "prix": "#number",
+    "qte": "#number",
+    "commande": {"id": "#number"},
+    "produit": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

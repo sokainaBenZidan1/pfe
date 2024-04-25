@@ -1,0 +1,67 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="inventaire_detail">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="qte_calculee" type="NUMERIC"/>
+        <column name="qte_stock" type="NUMERIC"/>
+        <column name="ecart" type="NUMERIC"/>
+        <column name="magasin" type="VARCHAR(500)"/>
+
+        <column name="produit_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+        <column name="inventaire_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+  </changeSet>
+
+    <!-- Add foreign key constraint -->
+  <changeSet id="2" author="your-name">
+      <addForeignKeyConstraint
+              baseTableName="inventaire_detail"
+              baseColumnNames="produit_id"
+              referencedTableName="produit"
+              referencedColumnNames="id"
+              constraintName="fk_inventaire_detail_produit"/>
+      <addForeignKeyConstraint
+              baseTableName="inventaire_detail"
+              baseColumnNames="inventaire_id"
+              referencedTableName="inventaire"
+              referencedColumnNames="id"
+              constraintName="fk_inventaire_detail_inventaire"/>
+
+  </changeSet>
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="3" author="your-name">
+    <createSequence sequenceName="inventaire_detail_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="4" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/inventaire/InventaireDetail.csv"
+            tableName="inventaire_detail">
+      <column name="id" type="NUMERIC"/>
+          <column name="qte_calculee" type="NUMERIC"/>
+          <column name="qte_stock" type="NUMERIC"/>
+          <column name="ecart" type="NUMERIC"/>
+          <column name="magasin" type="STRING"/>
+        <column name="produit" type="BIGINT"/>
+        <column name="inventaire" type="BIGINT"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

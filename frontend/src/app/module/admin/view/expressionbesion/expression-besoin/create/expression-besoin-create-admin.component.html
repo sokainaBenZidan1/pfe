@@ -1,0 +1,128 @@
+        <p-dialog [(visible)]="createDialog" [style]="{width: '70vw'}" header="{{'expressionBesoin.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+            <ng-template pTemplate="content" >
+                        <p-tabView>
+                            <p-tabPanel header="{{'expressionBesoin.tabPan' | translate}}">
+                                <div class="grid">
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="1">{{'expressionBesoin.employe' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="employes" [(ngModel)]="item.employe" id="1" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="nom" placeholder="{{'expressionBesoin.employe' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="2">{{'expressionBesoin.entiteAdmin' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="entiteAdmins" [(ngModel)]="item.entiteAdmin" id="2" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="libelle" placeholder="{{'expressionBesoin.entiteAdmin' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="3">{{'expressionBesoin.description' | translate}}</label>
+                                                    <textarea id="3" pInputTextarea rows="5" cols="30" placeholder="{{'expressionBesoin.description' | translate}}"  [(ngModel)]="item.description"
+                                                             ></textarea>
+                                                    
+                                                </div>
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="4">{{'expressionBesoin.dateExpression' | translate}}</label>
+                                                    <p-calendar appendTo="body" id="4"  [showTime]="true" [showSeconds]="false" placeholder="{{'expressionBesoin.dateExpression' | translate}}"  [(ngModel)]="item.dateExpression"
+                                                            dateFormat="{{dateFormat}}"  >
+                                                    </p-calendar>
+                                                    
+                                                </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="6">{{'expressionBesoin.etat' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="etats" [(ngModel)]="item.etat" id="6" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="libelle" placeholder="{{'expressionBesoin.etat' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                </div>
+                            </p-tabPanel>
+                                    <p-tabPanel header="{{'expressionBesoin.expressionBesoinDetails' | translate}}">
+                                                <div class="p-col">
+                                                    <div class="grid">
+                                                                    <div class="field col-12 md:col-6">
+                                                                        <label for="1">Qte demandee</label>
+                                                                        <p-inputNumber class="mb-2 mr-2" id="qteDemandee" placeholder="Qte demandee"  [(ngModel)]="expressionBesoinDetailsElement.qteDemandee"></p-inputNumber>
+                                                                        
+                                                                    </div>
+                                                                    <div class="field col-12 md:col-6">
+                                                                        <label for="2">Qte accordee</label>
+                                                                        <p-inputNumber class="mb-2 mr-2" id="qteAccordee" placeholder="Qte accordee"  [(ngModel)]="expressionBesoinDetailsElement.qteAccordee"></p-inputNumber>
+                                                                        
+                                                                    </div>
+                                                                    <div class="field col-12 md:col-6">
+                                                                        <label for="3">Qte livre</label>
+                                                                        <p-inputNumber class="mb-2 mr-2" id="qteLivre" placeholder="Qte livre"  [(ngModel)]="expressionBesoinDetailsElement.qteLivre"></p-inputNumber>
+                                                                        
+                                                                    </div>
+                                                                    <div class="field col-11 md:col-6">
+                                                                        <label>Produit</label>
+                                                                        <p-dropdown  appendTo="body"  [options]="produits" [(ngModel)]="expressionBesoinDetailsElement.produit"
+                                                                                     id="5"  [filter]="true" filterMatchMode="contains" [showClear]="true" optionLabel="libelle"
+                                                                                     placeholder="Produit"  >
+                                                                        </p-dropdown>
+                                                                        
+                                                                    </div>
+
+                                                        <div class="field col-12 md:col-1">
+                                                            <button pButton pRipple type="button" icon="pi pi-plus" class="mt-4" label="OK" (click)="addExpressionBesoinDetails()"></button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="p-col">
+                                                    <div class="card">
+                                                        <p-table [value]="item.expressionBesoinDetails" [scrollable]="true" scrollHeight="200px">
+                                                            <ng-template pTemplate="header">
+                                                                <tr>
+                                                                                <th>Qte demandee</th>
+                                                                                <th>Qte accordee</th>
+                                                                                <th>Qte livre</th>
+                                                                                <th>Produit</th>
+                                                                    <th>Actions</th>
+                                                                </tr>
+                                                            </ng-template>
+                                                            <ng-template pTemplate="body" let-p>
+                                                                <tr>
+                                                                                <td>{{p.qteDemandee}}</td>
+                                                                                <td>{{p.qteAccordee}}</td>
+                                                                                <td>{{p.qteLivre}}</td>
+                                                                            <td>{{p.produit?.libelle}}</td>
+                                                                    <td>
+                                                                        <button (click)="deleteExpressionBesoinDetails(p)" pButton type="button" icon="pi pi-times"  class="p-button-rounded p-button-danger"></button>
+                                                                        <button (click)="editExpressionBesoinDetails(p)" pButton type="button" icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"></button>
+                                                                    </td>
+                                                                </tr>
+                                                            </ng-template>
+                                                        </p-table>
+                                                    </div>
+
+                                                </div>
+                                    </p-tabPanel>
+
+
+                        </p-tabView>
+
+            </ng-template>
+
+            <ng-template pTemplate="footer" >
+                <div class="p-flexbox">
+
+                            <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="save()"></button>
+
+
+                            <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideCreateDialog()"></button>
+
+
+                </div>
+            </ng-template>
+
+    </p-dialog>

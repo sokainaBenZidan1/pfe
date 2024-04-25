@@ -1,0 +1,34 @@
+{
+    "montant": "10",
+    "montantInvestissement": "10",
+    "montantFonction": "10",
+
+    "budgetEntiteAdmins": [
+        {
+            "entiteAdmin":{"id": "1"},
+            "montantEntite":"10",
+            "montantInvEntite":"10",
+            "montantFctEntite":"10"
+        },
+        {
+            "entiteAdmin":{"id": "2"},
+            "montantEntite":"20",
+            "montantInvEntite":"20",
+            "montantFctEntite":"20"
+        },
+        {
+            "entiteAdmin":{"id": "3"},
+            "montantEntite":"30",
+            "montantInvEntite":"30",
+            "montantFctEntite":"30"
+        }
+    ]
+}
+
+
+
+
+
+
+
+

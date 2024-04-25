@@ -1,0 +1,63 @@
+        <p-dialog [(visible)]="createDialog" [style]="{width: '70vw'}" header="{{'expressionBesoinDetail.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+            <ng-template pTemplate="content" >
+                        <p-tabView>
+                            <p-tabPanel header="{{'expressionBesoinDetail.tabPan' | translate}}">
+                                <div class="grid">
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="1">{{'expressionBesoinDetail.qteDemandee' | translate}}</label>
+                                                    <p-inputNumber class="mb-2 mr-2" id="1" placeholder="{{'expressionBesoinDetail.qteDemandee' | translate}}" [(ngModel)]="item.qteDemandee"  >
+                                                    </p-inputNumber>
+                                                    
+                                                </div>
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="2">{{'expressionBesoinDetail.qteAccordee' | translate}}</label>
+                                                    <p-inputNumber class="mb-2 mr-2" id="2" placeholder="{{'expressionBesoinDetail.qteAccordee' | translate}}" [(ngModel)]="item.qteAccordee"  >
+                                                    </p-inputNumber>
+                                                    
+                                                </div>
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="3">{{'expressionBesoinDetail.qteLivre' | translate}}</label>
+                                                    <p-inputNumber class="mb-2 mr-2" id="3" placeholder="{{'expressionBesoinDetail.qteLivre' | translate}}" [(ngModel)]="item.qteLivre"  >
+                                                    </p-inputNumber>
+                                                    
+                                                </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="4">{{'expressionBesoinDetail.expressionBesoin' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="expressionBesoins" [(ngModel)]="item.expressionBesoin" id="4" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="id" placeholder="{{'expressionBesoinDetail.expressionBesoin' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="5">{{'expressionBesoinDetail.produit' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="produits" [(ngModel)]="item.produit" id="5" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="libelle" placeholder="{{'expressionBesoinDetail.produit' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                </div>
+                            </p-tabPanel>
+
+                        </p-tabView>
+
+            </ng-template>
+
+            <ng-template pTemplate="footer" >
+                <div class="p-flexbox">
+
+                            <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="save()"></button>
+
+
+                            <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideCreateDialog()"></button>
+
+
+                </div>
+            </ng-template>
+
+    </p-dialog>

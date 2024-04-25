@@ -1,0 +1,31 @@
+{
+    "ref": "#string",
+    "libelle": "#string",
+    "commande": {"id": "#number"},
+
+    "receptionDetails": [
+      {
+        "qte":"#number",}
+        "magasin":{"id": "#number"},}
+        "produit":{"id": "#number"}}
+      },
+      {
+        "qte":"#number",}
+        "magasin":{"id": "#number"},}
+        "produit":{"id": "#number"}}
+      },
+      {
+        "qte":"#number",}
+        "magasin":{"id": "#number"},}
+        "produit":{"id": "#number"}}
+      }
+    ]
+}
+
+
+
+
+
+
+
+

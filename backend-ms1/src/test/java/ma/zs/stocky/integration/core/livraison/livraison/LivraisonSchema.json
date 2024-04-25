@@ -1,0 +1,30 @@
+{
+    "ref": "#string",
+    "reception": {"id": "#number"},
+
+    "livraisonDetails": [
+      {
+        "qte":"#number",}
+        "magasin":{"id": "#number"},}
+        "produit":{"id": "#number"}}
+      },
+      {
+        "qte":"#number",}
+        "magasin":{"id": "#number"},}
+        "produit":{"id": "#number"}}
+      },
+      {
+        "qte":"#number",}
+        "magasin":{"id": "#number"},}
+        "produit":{"id": "#number"}}
+      }
+    ]
+}
+
+
+
+
+
+
+
+

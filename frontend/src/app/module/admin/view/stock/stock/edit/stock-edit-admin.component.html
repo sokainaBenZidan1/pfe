@@ -1,0 +1,56 @@
+    <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'stock.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+        <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'stock.tabPan' | translate}}">
+                        <div class="grid">
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="1">{{'stock.qte' | translate}}<span style="color: red;">*</span></label>
+                                            <p-inputNumber class="mb-2 mr-2" id="1" placeholder="{{'stock.qte' | translate}}" [(ngModel)]="item.qte" [ngClass]="{'ng-invalid ng-dirty' : !validStockQte}"  >
+                                            </p-inputNumber>
+                                            <small class='p-error' *ngIf='!validStockQte'>Qte est obligatoire.</small>
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="2">{{'stock.qteDeffectueuse' | translate}}<span style="color: red;">*</span></label>
+                                            <p-inputNumber class="mb-2 mr-2" id="2" placeholder="{{'stock.qteDeffectueuse' | translate}}" [(ngModel)]="item.qteDeffectueuse" [ngClass]="{'ng-invalid ng-dirty' : !validStockQteDeffectueuse}"  >
+                                            </p-inputNumber>
+                                            <small class='p-error' *ngIf='!validStockQteDeffectueuse'>QteDeffectueuse est obligatoire.</small>
+                                        </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="3">{{'stock.magasin' | translate}}<span style="color: red;">*</span></label>
+                                        <p-dropdown  appendTo="body"  [options]="magasins" [(ngModel)]="item.magasin" id="3" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="id" placeholder="{{'stock.magasin' | translate}}" [ngClass]="{'ng-invalid ng-dirty' : !validStockMagasin}"  >
+                                        </p-dropdown>
+                                        <small class='p-error' *ngIf='!validStockMagasin'>Magasin est obligatoire.</small>
+                                    </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="4">{{'stock.produit' | translate}}<span style="color: red;">*</span></label>
+                                        <p-dropdown  appendTo="body"  [options]="produits" [(ngModel)]="item.produit" id="4" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="libelle" placeholder="{{'stock.produit' | translate}}" [ngClass]="{'ng-invalid ng-dirty' : !validStockProduit}"  >
+                                        </p-dropdown>
+                                        <small class='p-error' *ngIf='!validStockProduit'>Produit est obligatoire.</small>
+                                    </div>
+
+                        </div>
+                    </p-tabPanel>
+
+                </p-tabView>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer" >
+            <div class="p-flexbox">
+
+                    <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="edit()"></button>
+
+
+                        <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+
+
+            </div>
+        </ng-template>
+
+    </p-dialog>

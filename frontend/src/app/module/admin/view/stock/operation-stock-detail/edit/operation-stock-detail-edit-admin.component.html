@@ -1,0 +1,49 @@
+    <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'operationStockDetail.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+        <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'operationStockDetail.tabPan' | translate}}">
+                        <div class="grid">
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="1">{{'operationStockDetail.qte' | translate}}<span style="color: red;">*</span></label>
+                                            <p-inputNumber class="mb-2 mr-2" id="1" placeholder="{{'operationStockDetail.qte' | translate}}" [(ngModel)]="item.qte" [ngClass]="{'ng-invalid ng-dirty' : !validOperationStockDetailQte}"  >
+                                            </p-inputNumber>
+                                            <small class='p-error' *ngIf='!validOperationStockDetailQte'>Qte est obligatoire.</small>
+                                        </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="2">{{'operationStockDetail.produit' | translate}}<span style="color: red;">*</span></label>
+                                        <p-dropdown  appendTo="body"  [options]="produits" [(ngModel)]="item.produit" id="2" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="libelle" placeholder="{{'operationStockDetail.produit' | translate}}" [ngClass]="{'ng-invalid ng-dirty' : !validOperationStockDetailProduit}"  >
+                                        </p-dropdown>
+                                        <small class='p-error' *ngIf='!validOperationStockDetailProduit'>Produit est obligatoire.</small>
+                                    </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="3">{{'operationStockDetail.operationStock' | translate}}<span style="color: red;">*</span></label>
+                                        <p-dropdown  appendTo="body"  [options]="operationStocks" [(ngModel)]="item.operationStock" id="3" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="ref" placeholder="{{'operationStockDetail.operationStock' | translate}}" [ngClass]="{'ng-invalid ng-dirty' : !validOperationStockDetailOperationStock}"  >
+                                        </p-dropdown>
+                                        <small class='p-error' *ngIf='!validOperationStockDetailOperationStock'>OperationStock est obligatoire.</small>
+                                    </div>
+
+                        </div>
+                    </p-tabPanel>
+
+                </p-tabView>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer" >
+            <div class="p-flexbox">
+
+                    <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="edit()"></button>
+
+
+                        <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+
+
+            </div>
+        </ng-template>
+
+    </p-dialog>

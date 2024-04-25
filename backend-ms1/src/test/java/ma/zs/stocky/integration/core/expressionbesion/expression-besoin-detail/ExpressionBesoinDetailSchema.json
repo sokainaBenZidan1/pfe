@@ -1,0 +1,16 @@
+{
+    "qteDemandee": "#number",
+    "qteAccordee": "#number",
+    "qteLivre": "#number",
+    "expressionBesoin": {"id": "#number"},
+    "produit": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

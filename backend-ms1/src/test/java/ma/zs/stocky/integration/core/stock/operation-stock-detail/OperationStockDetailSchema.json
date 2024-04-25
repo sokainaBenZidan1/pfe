@@ -1,0 +1,14 @@
+{
+    "qte": "#number",
+    "produit": {"id": "#number"},
+    "operationStock": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+            <include file="classpath:db/migration/changelog/reception/ReceptionDetail.xml"/>
+        <include file="classpath:db/migration/changelog/mandat/Responsabilite.xml"/>
+        <include file="classpath:db/migration/changelog/achat/TypeAchatMateriel.xml"/>
+        <include file="classpath:db/migration/changelog/livraison/LivraisonDetail.xml"/>
+        <include file="classpath:db/migration/changelog/expressionbesion/ExpressionBesoin.xml"/>
+        <include file="classpath:db/migration/changelog/commande/Commande.xml"/>
+        <include file="classpath:db/migration/changelog/commun/Employe.xml"/>
+        <include file="classpath:db/migration/changelog/expressionbesion/ExpressionBesoinDetail.xml"/>
+        <include file="classpath:db/migration/changelog/budget/Budget.xml"/>
+        <include file="classpath:db/migration/changelog/achat/AchatMateriel.xml"/>
+        <include file="classpath:db/migration/changelog/mandat/Mandat.xml"/>
+        <include file="classpath:db/migration/changelog/expressionbesion/Etat.xml"/>
+        <include file="classpath:db/migration/changelog/budget/BudgetCompteBudgetaire.xml"/>
+        <include file="classpath:db/migration/changelog/stock/Magasin.xml"/>
+        <include file="classpath:db/migration/changelog/inventaire/ResponsableInventaire.xml"/>
+        <include file="classpath:db/migration/changelog/commun/EntiteAdmin.xml"/>
+        <include file="classpath:db/migration/changelog/inventaire/InventaireDetail.xml"/>
+        <include file="classpath:db/migration/changelog/inventaire/Inventaire.xml"/>
+        <include file="classpath:db/migration/changelog/produit/CategorieProduit.xml"/>
+        <include file="classpath:db/migration/changelog/stock/Stock.xml"/>
+        <include file="classpath:db/migration/changelog/commande/CommandeDetail.xml"/>
+        <include file="classpath:db/migration/changelog/reception/Reception.xml"/>
+        <include file="classpath:db/migration/changelog/stock/OperationStock.xml"/>
+        <include file="classpath:db/migration/changelog/budget/BudgetEntiteAdmin.xml"/>
+        <include file="classpath:db/migration/changelog/budget/CompteBudgetaire.xml"/>
+        <include file="classpath:db/migration/changelog/produit/Produit.xml"/>
+        <include file="classpath:db/migration/changelog/livraison/Livraison.xml"/>
+        <include file="classpath:db/migration/changelog/achat/AchatMaterielDetail.xml"/>
+        <include file="classpath:db/migration/changelog/stock/OperationStockDetail.xml"/>
+
+</databaseChangeLog>

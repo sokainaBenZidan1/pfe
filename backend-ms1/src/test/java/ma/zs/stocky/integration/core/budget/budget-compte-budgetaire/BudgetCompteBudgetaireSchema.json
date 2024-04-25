@@ -1,0 +1,14 @@
+{
+    "budget": {"id": "#number"},
+    "compteBudgetaire": {"id": "#number"},
+    "montant": "#number"
+
+}
+
+
+
+
+
+
+
+

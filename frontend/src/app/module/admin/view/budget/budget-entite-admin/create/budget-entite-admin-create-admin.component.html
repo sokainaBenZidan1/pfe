@@ -1,0 +1,63 @@
+        <p-dialog [(visible)]="createDialog" [style]="{width: '70vw'}" header="{{'budgetEntiteAdmin.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+            <ng-template pTemplate="content" >
+                        <p-tabView>
+                            <p-tabPanel header="{{'budgetEntiteAdmin.tabPan' | translate}}">
+                                <div class="grid">
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="1">{{'budgetEntiteAdmin.entiteAdmin' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="entiteAdmins" [(ngModel)]="item.entiteAdmin" id="1" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="libelle" placeholder="{{'budgetEntiteAdmin.entiteAdmin' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="2">{{'budgetEntiteAdmin.montantEntite' | translate}}</label>
+                                                    <p-inputNumber class="mb-2 mr-2" id="2" placeholder="{{'budgetEntiteAdmin.montantEntite' | translate}}" [(ngModel)]="item.montantEntite"  >
+                                                    </p-inputNumber>
+                                                    
+                                                </div>
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="3">{{'budgetEntiteAdmin.montantInvEntite' | translate}}</label>
+                                                    <p-inputNumber class="mb-2 mr-2" id="3" placeholder="{{'budgetEntiteAdmin.montantInvEntite' | translate}}" [(ngModel)]="item.montantInvEntite"  >
+                                                    </p-inputNumber>
+                                                    
+                                                </div>
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="4">{{'budgetEntiteAdmin.montantFctEntite' | translate}}</label>
+                                                    <p-inputNumber class="mb-2 mr-2" id="4" placeholder="{{'budgetEntiteAdmin.montantFctEntite' | translate}}" [(ngModel)]="item.montantFctEntite"  >
+                                                    </p-inputNumber>
+                                                    
+                                                </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="5">{{'budgetEntiteAdmin.budget' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="budgets" [(ngModel)]="item.budget" id="5" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="id" placeholder="{{'budgetEntiteAdmin.budget' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                </div>
+                            </p-tabPanel>
+
+                        </p-tabView>
+
+            </ng-template>
+
+            <ng-template pTemplate="footer" >
+                <div class="p-flexbox">
+
+                            <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="save()"></button>
+
+
+                            <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideCreateDialog()"></button>
+
+
+                </div>
+            </ng-template>
+
+    </p-dialog>

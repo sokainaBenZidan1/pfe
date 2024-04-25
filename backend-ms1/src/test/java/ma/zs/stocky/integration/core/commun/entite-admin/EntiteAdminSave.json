@@ -1,0 +1,27 @@
+{
+    "code": "code-1",
+    "libelle": "libelle-1",
+
+    "employe": [
+        {
+            "nom":"nom-1",
+            "prenom":"prenom-1"
+        },
+        {
+            "nom":"nom-2",
+            "prenom":"prenom-2"
+        },
+        {
+            "nom":"nom-3",
+            "prenom":"prenom-3"
+        }
+    ]
+}
+
+
+
+
+
+
+
+

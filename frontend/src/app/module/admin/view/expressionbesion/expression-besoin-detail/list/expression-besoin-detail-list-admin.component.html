@@ -1,0 +1,179 @@
+<div class="grid"  *ngIf="listActionIsValid">
+    <div class="col-12">
+        <p-toast></p-toast>
+        <div class="card">
+            <p-toolbar styleClass="mb-4">
+                <ng-template pTemplate="left">
+                                        <button pButton pRipple label=" {{'new' | translate}}" icon="pi pi-plus" class="p-button-info mr-2 mb-2" (click)="openCreate('ExpressionBesoinDetail')" *ngIf="createActionIsValid"></button>
+                    <button [disabled]="isSelectionDisabled()" pButton pRipple label=" {{'delete' | translate}}" icon="pi pi-trash" class="p-button-danger mr-2 mb-2" (click)=deleteMultiple()  *ngIf="deleteActionIsValid"></button>
+                    <button pButton pRipple label=" {{'search' | translate}}" icon="pi pi-{{findByCriteriaShow?'angle-down':'angle-right'}}" class="p-button-secondary mr-2 mb-2" (click)="this.showSearch()"></button>
+                </ng-template>
+                <ng-template pTemplate="right">
+                    <div class="flex">
+                        <p-splitButton label=" {{'export' | translate}}" icon="pi pi-download" styleClass="p-button-secondary" [model]="excelPdfButons"></p-splitButton>
+                    </div>
+                </ng-template>
+
+            </p-toolbar>
+            <p-toolbar *ngIf="findByCriteriaShow">
+
+                <div class="col-12">
+                    <div class="flex flex-wrap p-fluid col-12">
+                        <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
+                            <label  class="font-bold block mb-2" for="1-1">{{'expressionBesoinDetail.qteDemandeeMin' | translate}}</label>
+                            <p-inputNumber  mode="decimal" [(ngModel)]="criteria.qteDemandeeMin" id="1-1"></p-inputNumber>
+                        </div>
+                        <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
+                            <label  class="font-bold block mb-2" for="1-2">{{'expressionBesoinDetail.qteDemandeeMax' | translate}}</label>
+                            <p-inputNumber  mode="decimal" [(ngModel)]="criteria.qteDemandeeMax" id="1-2"></p-inputNumber>
+                       </div>
+                        <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
+                            <label  class="font-bold block mb-2" for="2-1">{{'expressionBesoinDetail.qteAccordeeMin' | translate}}</label>
+                            <p-inputNumber  mode="decimal" [(ngModel)]="criteria.qteAccordeeMin" id="2-1"></p-inputNumber>
+                        </div>
+                        <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
+                            <label  class="font-bold block mb-2" for="2-2">{{'expressionBesoinDetail.qteAccordeeMax' | translate}}</label>
+                            <p-inputNumber  mode="decimal" [(ngModel)]="criteria.qteAccordeeMax" id="2-2"></p-inputNumber>
+                       </div>
+                        <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
+                            <label  class="font-bold block mb-2" for="3-1">{{'expressionBesoinDetail.qteLivreMin' | translate}}</label>
+                            <p-inputNumber  mode="decimal" [(ngModel)]="criteria.qteLivreMin" id="3-1"></p-inputNumber>
+                        </div>
+                        <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
+                            <label  class="font-bold block mb-2" for="3-2">{{'expressionBesoinDetail.qteLivreMax' | translate}}</label>
+                            <p-inputNumber  mode="decimal" [(ngModel)]="criteria.qteLivreMax" id="3-2"></p-inputNumber>
+                       </div>
+                        <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
+                            <label  class="font-bold block mb-2" for="4-2">{{'expressionBesoinDetail.expressionBesoin' | translate}}</label>
+                            <p-dropdown [options]="expressionBesoins" [(ngModel)]="criteria.expressionBesoin" id="4" [filter]="true" class="p-fluid"
+                                        [showClear]="true"  placeholder="{{'expressionBesoinDetail.expressionBesoin' | translate}}" optionLabel="id">
+                            </p-dropdown>
+                        </div>
+                        <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
+                            <label  class="font-bold block mb-2" for="5-2">{{'expressionBesoinDetail.produit' | translate}}</label>
+                            <p-dropdown [options]="produits" [(ngModel)]="criteria.produit" id="5" [filter]="true" class="p-fluid"
+                                        [showClear]="true"  placeholder="{{'expressionBesoinDetail.produit' | translate}}" optionLabel="libelle">
+                            </p-dropdown>
+                        </div>
+                    </div>
+                    <div [style]="{ marginTop : '1rem', display: 'flex', justifyContent: 'flex-end' }">
+                        <button pButton pRipple label="{{'validate' | translate}}" icon="pi pi-sort-amount-down" class="p-button-info mr-2" (click)="findPaginatedByCriteria()"></button>
+                    </div>
+                </div>
+
+
+            </p-toolbar>
+
+
+            <p-table #dt [value]="items" [columns]="cols" [rows]="8" [paginator]="false"
+                    [globalFilterFields]="['qteDemandee', 'qteAccordee', 'qteLivre', 'expressionBesoinid', 'produitlibelle']" [(selection)]="selections"
+                    [rowHover]="true" dataKey="id" styleClass="p-datatable-customers"
+                    currentPageReportTemplate="{{'les éléments de {first} à {last} sur {totalRecords} ' | translate}}"
+                    [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" selectionMode="multiple">
+                <ng-template pTemplate="caption">
+                    <div class="flex flex-column flex-row justify-content-between table-header">
+                        <h5 class="p-m-0">{{'expressionBesoinDetail.header' | translate}}</h5>
+                        <span class="p-input-icon-left ml-auto">
+                            <i class="pi pi-search"></i>
+                            <input pInputText type="text" placeholder="{{'searchInput' | translate}}" (input)="dt.filterGlobal($event.target.value, 'contains')"/>
+                        </span>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th style="width: 3rem">
+                            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                        </th>
+                                
+                        <th pSortableColumn="qteDemandee">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                                <span>{{'expressionBesoinDetail.qteDemandee' | translate}}</span>
+                                <p-sortIcon field="qteDemandee"></p-sortIcon>
+                            </div>
+                        </th>
+                                
+                                
+                        <th pSortableColumn="qteAccordee">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                                <span>{{'expressionBesoinDetail.qteAccordee' | translate}}</span>
+                                <p-sortIcon field="qteAccordee"></p-sortIcon>
+                            </div>
+                        </th>
+                                
+                                
+                        <th pSortableColumn="qteLivre">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                                <span>{{'expressionBesoinDetail.qteLivre' | translate}}</span>
+                                <p-sortIcon field="qteLivre"></p-sortIcon>
+                            </div>
+                        </th>
+                                
+                                
+                        <th pSortableColumn="expressionBesoin">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                                <span>{{'expressionBesoinDetail.expressionBesoin' | translate}}</span>
+                                <p-sortIcon field="expressionBesoin"></p-sortIcon>
+                            </div>
+                        </th>
+                                
+                                
+                        <th pSortableColumn="produit">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                                <span>{{'expressionBesoinDetail.produit' | translate}}</span>
+                                <p-sortIcon field="produit"></p-sortIcon>
+                            </div>
+                        </th>
+                                
+                        <th>Actions</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-element>
+                    <tr>
+                        <td>
+                            <p-tableCheckbox [value]="element"></p-tableCheckbox>
+                        </td>
+                            
+                        <td>{{element.qteDemandee}}</td>
+                            
+                            
+                        <td>{{element.qteAccordee}}</td>
+                            
+                            
+                        <td>{{element.qteLivre}}</td>
+                            
+                            
+                        <td>{{element.expressionBesoin?.id}}</td>
+                            
+                            
+                        <td>{{element.produit?.libelle}}</td>
+                            
+                        <td>
+                            <button pButton pRipple icon="pi pi-pencil"  class="p-button-rounded p-button-info mr-2" (click)="edit(element)"  *ngIf="editActionIsValid"></button>
+                            <button pButton pRipple icon="pi pi-list" class="p-button-rounded p-button-secondary mr-2" (click)="view(element)"  *ngIf="viewActionIsValid"></button>
+                            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger mr-2" (click)="delete(element)"  *ngIf="deleteActionIsValid"></button>
+                            <button pButton pRipple icon="pi pi-copy" class="p-button-rounded p-button-raised p-button-warning mr-2" (click)="duplicate(element)"  *ngIf="duplicateActionIsValid"></button>
+                        </td>
+                    </tr>
+                </ng-template>
+
+                <ng-template pTemplate="summary">
+                    <p-paginator  [rows]="10" [totalRecords]="totalRecords" (onPageChange)="onPage($event)"></p-paginator>
+                    <div class="p-d-flex p-ai-center p-jc-between">
+                        En totale il {{items ? totalRecords == 1 ? 'y a' : 'y a' : 'y a' }} {{items ? totalRecords : 0 }} {{items ? totalRecords == 1 ? 'expression besoin detail' : 'expression besoin details' : 0 }}.
+                    </div>
+                </ng-template>
+            </p-table>
+        </div>
+
+        <app-expression-besoin-detail-create-admin  *ngIf="createDialog  && createActionIsValid"></app-expression-besoin-detail-create-admin>
+        <app-expression-besoin-detail-edit-admin  *ngIf="editDialog  && editActionIsValid"></app-expression-besoin-detail-edit-admin>
+        <app-expression-besoin-detail-view-admin  *ngIf="viewDialog  && viewActionIsValid"></app-expression-besoin-detail-view-admin>
+        <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
+    </div>
+</div>
+
+<p-card header="Permission not allowed" *ngIf="!listActionIsValid">
+    <p class="m-0">
+        You don't have permission to access !
+    </p>
+</p-card>

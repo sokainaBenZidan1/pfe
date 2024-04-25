@@ -1,0 +1,34 @@
+{
+    "budget": {"id": "#number"},
+    "montantTotal": "#number",
+    "typeAchatMateriel": {"id": "#number"},
+
+    "achatMaterielDetails": [
+      {
+        "produit":{"id": "#number"},}
+        "qteAchetee":"#number",}
+        "qteRecue":"#number",}
+        "qteLivree":"#number"}
+      },
+      {
+        "produit":{"id": "#number"},}
+        "qteAchetee":"#number",}
+        "qteRecue":"#number",}
+        "qteLivree":"#number"}
+      },
+      {
+        "produit":{"id": "#number"},}
+        "qteAchetee":"#number",}
+        "qteRecue":"#number",}
+        "qteLivree":"#number"}
+      }
+    ]
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+{
+    "qte": "#number",
+    "magasin": {"id": "#number"},
+    "produit": {"id": "#number"},
+    "livraison": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

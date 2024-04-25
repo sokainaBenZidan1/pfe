@@ -1,0 +1,66 @@
+
+<p-dialog [(visible)]="viewDialog" [style]="{width: '70vw'}" header="{{'achatMateriel.tabPan' | translate}}" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        <p-tabView>
+            <p-tabPanel header="{{'achatMateriel.tabPan' | translate}}">
+                <div class="grid">
+                    <div class="field col-12 md:col-6">
+                        <label for="1">{{'achatMateriel.budget' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'achatMateriel.budget' | translate}}" autofocus  id="1" [ngModel]="item.budget?.id">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="2">{{'achatMateriel.montantTotal' | translate}}</label>
+                        <p-inputNumber class="mb-2 mr-2" id="2" [disabled]="true" placeholder="{{'achatMateriel.montantTotal' | translate}}" [ngModel]="item.montantTotal"></p-inputNumber>
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="3">{{'achatMateriel.dateAchat' | translate}}</label>
+                        <p-calendar id="3" [disabled]="true"  [showTime]="true" [showSeconds]="false" placeholder="{{'achatMateriel.dateAchat' | translate}}"  [ngModel]="item.dateAchat" dateFormat="{{dateFormat}}"></p-calendar>
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="4">{{'achatMateriel.typeAchatMateriel' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'achatMateriel.typeAchatMateriel' | translate}}" autofocus  id="4" [ngModel]="item.typeAchatMateriel?.libelle">
+                    </div>
+                </div>
+            </p-tabPanel>
+
+            <p-tabPanel header="{{'achatMateriel.achatMaterielDetails' | translate}}">
+                <div class="grid">
+                    <div class="col">
+                        <div class="card">
+                            <p-table [value]="item.achatMaterielDetails" [scrollable]="true" scrollHeight="200px">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Produit</th>
+                                        <th>Qte achetee</th>
+                                        <th>Qte recue</th>
+                                        <th>Qte livree</th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-p>
+                                    <tr>
+                                        <td>{{p.produit?.libelle}}</td>
+                                        <td>{{p.qteAchetee}}</td>
+                                        <td>{{p.qteRecue}}</td>
+                                        <td>{{p.qteLivree}}</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </div>
+                    </div>
+                </div>
+            </p-tabPanel>
+        </p-tabView>
+
+    </ng-template>
+
+    <ng-template pTemplate="footer" >
+        <div class="p-flexbox">
+            <div>
+                <button pButton pRipple label="Annuler" icon="pi pi-times" class="p-button-outlined" (click)="hideViewDialog()"></button>
+            </div>
+        </div>
+    </ng-template>
+</p-dialog>
+
+
+

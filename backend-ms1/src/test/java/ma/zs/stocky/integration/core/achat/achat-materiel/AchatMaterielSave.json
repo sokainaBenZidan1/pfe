@@ -1,0 +1,34 @@
+{
+    "budget": {"id": "1"},
+    "montantTotal": "10",
+    "typeAchatMateriel": {"id": "1"},
+
+    "achatMaterielDetails": [
+        {
+            "produit":{"id": "1"},
+            "qteAchetee":"10",
+            "qteRecue":"10",
+            "qteLivree":"10"
+        },
+        {
+            "produit":{"id": "2"},
+            "qteAchetee":"20",
+            "qteRecue":"20",
+            "qteLivree":"20"
+        },
+        {
+            "produit":{"id": "3"},
+            "qteAchetee":"30",
+            "qteRecue":"30",
+            "qteLivree":"30"
+        }
+    ]
+}
+
+
+
+
+
+
+
+

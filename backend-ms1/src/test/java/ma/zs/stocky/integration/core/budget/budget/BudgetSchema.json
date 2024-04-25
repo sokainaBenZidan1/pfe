@@ -1,0 +1,34 @@
+{
+    "montant": "#number",
+    "montantInvestissement": "#number",
+    "montantFonction": "#number",
+
+    "budgetEntiteAdmins": [
+      {
+        "entiteAdmin":{"id": "#number"},}
+        "montantEntite":"#number",}
+        "montantInvEntite":"#number",}
+        "montantFctEntite":"#number"}
+      },
+      {
+        "entiteAdmin":{"id": "#number"},}
+        "montantEntite":"#number",}
+        "montantInvEntite":"#number",}
+        "montantFctEntite":"#number"}
+      },
+      {
+        "entiteAdmin":{"id": "#number"},}
+        "montantEntite":"#number",}
+        "montantInvEntite":"#number",}
+        "montantFctEntite":"#number"}
+      }
+    ]
+}
+
+
+
+
+
+
+
+

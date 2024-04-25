@@ -1,0 +1,56 @@
+        <p-dialog [(visible)]="createDialog" [style]="{width: '70vw'}" header="{{'commandeDetail.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+            <ng-template pTemplate="content" >
+                        <p-tabView>
+                            <p-tabPanel header="{{'commandeDetail.tabPan' | translate}}">
+                                <div class="grid">
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="1">{{'commandeDetail.prix' | translate}}<span style="color: red;">*</span></label>
+                                                    <p-inputNumber class="mb-2 mr-2" id="1" placeholder="{{'commandeDetail.prix' | translate}}" [(ngModel)]="item.prix" [ngClass]="{'ng-invalid ng-dirty' : !validCommandeDetailPrix}"  >
+                                                    </p-inputNumber>
+                                                    <small class='p-error' *ngIf='!validCommandeDetailPrix'>Prix est obligatoire.</small>
+                                                </div>
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="2">{{'commandeDetail.qte' | translate}}<span style="color: red;">*</span></label>
+                                                    <p-inputNumber class="mb-2 mr-2" id="2" placeholder="{{'commandeDetail.qte' | translate}}" [(ngModel)]="item.qte" [ngClass]="{'ng-invalid ng-dirty' : !validCommandeDetailQte}"  >
+                                                    </p-inputNumber>
+                                                    <small class='p-error' *ngIf='!validCommandeDetailQte'>Qte est obligatoire.</small>
+                                                </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="3">{{'commandeDetail.commande' | translate}}<span style="color: red;">*</span></label>
+                                                <p-dropdown  appendTo="body"  [options]="commandes" [(ngModel)]="item.commande" id="3" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="ref" placeholder="{{'commandeDetail.commande' | translate}}" [ngClass]="{'ng-invalid ng-dirty' : !validCommandeDetailCommande}"  >
+                                                </p-dropdown>
+                                                <small class='p-error' *ngIf='!validCommandeDetailCommande'>Commande est obligatoire.</small>
+                                            </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="4">{{'commandeDetail.produit' | translate}}<span style="color: red;">*</span></label>
+                                                <p-dropdown  appendTo="body"  [options]="produits" [(ngModel)]="item.produit" id="4" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="libelle" placeholder="{{'commandeDetail.produit' | translate}}" [ngClass]="{'ng-invalid ng-dirty' : !validCommandeDetailProduit}"  >
+                                                </p-dropdown>
+                                                <small class='p-error' *ngIf='!validCommandeDetailProduit'>Produit est obligatoire.</small>
+                                            </div>
+
+                                </div>
+                            </p-tabPanel>
+
+                        </p-tabView>
+
+            </ng-template>
+
+            <ng-template pTemplate="footer" >
+                <div class="p-flexbox">
+
+                            <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="save()"></button>
+
+
+                            <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideCreateDialog()"></button>
+
+
+                </div>
+            </ng-template>
+
+    </p-dialog>

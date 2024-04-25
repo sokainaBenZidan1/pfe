@@ -1,0 +1,35 @@
+{
+    "responsableInv": {"id": "#number"},
+
+    "inventaireDetails": [
+      {
+        "qteCalculee":"#number",}
+        "qteStock":"#number",}
+        "ecart":"#number",}
+        "magasin":"#string",}
+        "produit":{"id": "#number"}}
+      },
+      {
+        "qteCalculee":"#number",}
+        "qteStock":"#number",}
+        "ecart":"#number",}
+        "magasin":"#string",}
+        "produit":{"id": "#number"}}
+      },
+      {
+        "qteCalculee":"#number",}
+        "qteStock":"#number",}
+        "ecart":"#number",}
+        "magasin":"#string",}
+        "produit":{"id": "#number"}}
+      }
+    ]
+}
+
+
+
+
+
+
+
+

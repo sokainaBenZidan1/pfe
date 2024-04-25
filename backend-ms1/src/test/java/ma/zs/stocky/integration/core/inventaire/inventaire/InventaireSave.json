@@ -1,0 +1,35 @@
+{
+    "responsableInv": {"id": "1"},
+
+    "inventaireDetails": [
+        {
+            "qteCalculee":"10",
+            "qteStock":"10",
+            "ecart":"10",
+            "magasin":"magasin-1",
+            "produit":{"id": "1"}
+        },
+        {
+            "qteCalculee":"20",
+            "qteStock":"20",
+            "ecart":"20",
+            "magasin":"magasin-2",
+            "produit":{"id": "2"}
+        },
+        {
+            "qteCalculee":"30",
+            "qteStock":"30",
+            "ecart":"30",
+            "magasin":"magasin-3",
+            "produit":{"id": "3"}
+        }
+    ]
+}
+
+
+
+
+
+
+
+

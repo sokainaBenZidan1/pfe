@@ -1,0 +1,27 @@
+{
+    "code": "#string",
+    "libelle": "#string",
+
+    "employe": [
+      {
+        "nom":"#string",}
+        "prenom":"#string"}
+      },
+      {
+        "nom":"#string",}
+        "prenom":"#string"}
+      },
+      {
+        "nom":"#string",}
+        "prenom":"#string"}
+      }
+    ]
+}
+
+
+
+
+
+
+
+

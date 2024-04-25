@@ -1,0 +1,57 @@
+        <p-dialog [(visible)]="createDialog" [style]="{width: '70vw'}" header="{{'livraisonDetail.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+            <ng-template pTemplate="content" >
+                        <p-tabView>
+                            <p-tabPanel header="{{'livraisonDetail.tabPan' | translate}}">
+                                <div class="grid">
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="1">{{'livraisonDetail.qte' | translate}}<span style="color: red;">*</span></label>
+                                                    <p-inputNumber class="mb-2 mr-2" id="1" placeholder="{{'livraisonDetail.qte' | translate}}" [(ngModel)]="item.qte" [ngClass]="{'ng-invalid ng-dirty' : !validLivraisonDetailQte}"  >
+                                                    </p-inputNumber>
+                                                    <small class='p-error' *ngIf='!validLivraisonDetailQte'>Qte est obligatoire.</small>
+                                                </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="2">{{'livraisonDetail.magasin' | translate}}<span style="color: red;">*</span></label>
+                                                <p-dropdown  appendTo="body"  [options]="magasins" [(ngModel)]="item.magasin" id="2" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="id" placeholder="{{'livraisonDetail.magasin' | translate}}" [ngClass]="{'ng-invalid ng-dirty' : !validLivraisonDetailMagasin}"  >
+                                                </p-dropdown>
+                                                <small class='p-error' *ngIf='!validLivraisonDetailMagasin'>Magasin est obligatoire.</small>
+                                            </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="3">{{'livraisonDetail.produit' | translate}}<span style="color: red;">*</span></label>
+                                                <p-dropdown  appendTo="body"  [options]="produits" [(ngModel)]="item.produit" id="3" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="libelle" placeholder="{{'livraisonDetail.produit' | translate}}" [ngClass]="{'ng-invalid ng-dirty' : !validLivraisonDetailProduit}"  >
+                                                </p-dropdown>
+                                                <small class='p-error' *ngIf='!validLivraisonDetailProduit'>Produit est obligatoire.</small>
+                                            </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="4">{{'livraisonDetail.livraison' | translate}}<span style="color: red;">*</span></label>
+                                                <p-dropdown  appendTo="body"  [options]="livraisons" [(ngModel)]="item.livraison" id="4" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="ref" placeholder="{{'livraisonDetail.livraison' | translate}}" [ngClass]="{'ng-invalid ng-dirty' : !validLivraisonDetailLivraison}"  >
+                                                </p-dropdown>
+                                                <small class='p-error' *ngIf='!validLivraisonDetailLivraison'>Livraison est obligatoire.</small>
+                                            </div>
+
+                                </div>
+                            </p-tabPanel>
+
+                        </p-tabView>
+
+            </ng-template>
+
+            <ng-template pTemplate="footer" >
+                <div class="p-flexbox">
+
+                            <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="save()"></button>
+
+
+                            <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideCreateDialog()"></button>
+
+
+                </div>
+            </ng-template>
+
+    </p-dialog>

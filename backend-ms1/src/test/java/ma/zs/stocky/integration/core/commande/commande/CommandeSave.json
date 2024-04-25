@@ -1,0 +1,32 @@
+{
+    "ref": "ref-1",
+    "total": "10",
+    "totalPaye": "10",
+    "entiteAdmin": {"id": "1"},
+
+    "commandeDetails": [
+        {
+            "prix":"10",
+            "qte":"10",
+            "produit":{"id": "1"}
+        },
+        {
+            "prix":"20",
+            "qte":"20",
+            "produit":{"id": "2"}
+        },
+        {
+            "prix":"30",
+            "qte":"30",
+            "produit":{"id": "3"}
+        }
+    ]
+}
+
+
+
+
+
+
+
+

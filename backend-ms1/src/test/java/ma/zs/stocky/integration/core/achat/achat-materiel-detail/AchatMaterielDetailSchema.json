@@ -1,0 +1,16 @@
+{
+    "produit": {"id": "#number"},
+    "qteAchetee": "#number",
+    "qteRecue": "#number",
+    "qteLivree": "#number",
+    "achatMateriel": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

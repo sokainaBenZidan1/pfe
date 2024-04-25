@@ -1,0 +1,118 @@
+    <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'budget.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+        <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'budget.tabPan' | translate}}">
+                        <div class="grid">
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="1">{{'budget.dateBudget' | translate}}</label>
+                                            <p-calendar appendTo="body" id="1"  [showTime]="true" [showSeconds]="false" placeholder="{{'budget.dateBudget' | translate}}"  [(ngModel)]="item.dateBudget"
+                                                        dateFormat="{{dateFormat}}"  >
+                                            </p-calendar>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="2">{{'budget.montant' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="2" placeholder="{{'budget.montant' | translate}}" [(ngModel)]="item.montant"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="3">{{'budget.montantInvestissement' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="3" placeholder="{{'budget.montantInvestissement' | translate}}" [(ngModel)]="item.montantInvestissement"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="4">{{'budget.montantFonction' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="4" placeholder="{{'budget.montantFonction' | translate}}" [(ngModel)]="item.montantFonction"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                        </div>
+                    </p-tabPanel>
+                            <p-tabPanel header="{{'budget.budgetEntiteAdmins' | translate}}">
+                                        <div class="p-col">
+                                            <div class="grid">
+                                                            <div class="field col-11 md:col-6">
+                                                                <label>Entite admin</label>
+                                                                <p-dropdown  appendTo="body"  [options]="entiteAdmins" [(ngModel)]="budgetEntiteAdminsElement.entiteAdmin"
+                                                                             id="1"  [filter]="true" filterMatchMode="contains" [showClear]="true" optionLabel="libelle"
+                                                                             placeholder="Entite admin"  >
+                                                                </p-dropdown>
+                                                                
+                                                            </div>
+
+                                                            <div class="field col-12 md:col-6">
+                                                                <label for="2">Montant entite</label>
+                                                                <p-inputNumber class="mb-2 mr-2" id="montantEntite" placeholder="Montant entite"  [(ngModel)]="budgetEntiteAdminsElement.montantEntite"></p-inputNumber>
+                                                                
+                                                            </div>
+                                                            <div class="field col-12 md:col-6">
+                                                                <label for="3">Montant inv entite</label>
+                                                                <p-inputNumber class="mb-2 mr-2" id="montantInvEntite" placeholder="Montant inv entite"  [(ngModel)]="budgetEntiteAdminsElement.montantInvEntite"></p-inputNumber>
+                                                                
+                                                            </div>
+                                                            <div class="field col-12 md:col-6">
+                                                                <label for="4">Montant fct entite</label>
+                                                                <p-inputNumber class="mb-2 mr-2" id="montantFctEntite" placeholder="Montant fct entite"  [(ngModel)]="budgetEntiteAdminsElement.montantFctEntite"></p-inputNumber>
+                                                                
+                                                            </div>
+                                                <div class="field col-12 md:col-1">
+                                                    <button pButton pRipple type="button" icon="pi pi-plus" class="mt-4" label="OK" (click)="addBudgetEntiteAdmins()"></button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="p-col">
+                                            <div class="card">
+                                                <p-table [value]="item.budgetEntiteAdmins" [scrollable]="true" scrollHeight="200px">
+                                                    <ng-template pTemplate="header">
+                                                        <tr>
+                                                                        <th>Entite admin</th>
+                                                                        <th>Montant entite</th>
+                                                                        <th>Montant inv entite</th>
+                                                                        <th>Montant fct entite</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </ng-template>
+                                                    <ng-template pTemplate="body" let-p>
+                                                        <tr>
+                                                                    <td>{{p.entiteAdmin?.libelle}}</td>
+                                                                        <td>{{p.montantEntite}}</td>
+                                                                        <td>{{p.montantInvEntite}}</td>
+                                                                        <td>{{p.montantFctEntite}}</td>
+                                                            <td>
+                                                                <button (click)="deleteBudgetEntiteAdmins(p)" pButton type="button" icon="pi pi-times"  class="p-button-rounded p-button-danger"></button>
+                                                                <button (click)="editBudgetEntiteAdmins(p)" pButton type="button" icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"></button>
+                                                            </td>
+                                                        </tr>
+                                                    </ng-template>
+                                                </p-table>
+                                            </div>
+
+                                        </div>
+                            </p-tabPanel>
+
+
+                </p-tabView>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer" >
+            <div class="p-flexbox">
+
+                    <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="edit()"></button>
+
+
+                        <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+
+
+            </div>
+        </ng-template>
+
+    </p-dialog>

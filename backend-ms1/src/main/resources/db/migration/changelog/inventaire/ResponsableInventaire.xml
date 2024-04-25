@@ -1,0 +1,43 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="responsable_inventaire">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="nom" type="VARCHAR(500)"/>
+        <column name="prenom" type="VARCHAR(500)"/>
+        <column name="login" type="VARCHAR(500)"/>
+        <column name="mdp" type="VARCHAR(500)"/>
+
+
+    </createTable>
+  </changeSet>
+
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="2" author="your-name">
+    <createSequence sequenceName="responsable_inventaire_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="3" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/inventaire/ResponsableInventaire.csv"
+            tableName="responsable_inventaire">
+      <column name="id" type="NUMERIC"/>
+          <column name="nom" type="STRING"/>
+          <column name="prenom" type="STRING"/>
+          <column name="login" type="STRING"/>
+          <column name="mdp" type="STRING"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

@@ -1,0 +1,641 @@
+{
+    "from-to": "Elements from {first} to {last} (total {totalRecords})",
+    "new" : "Nouveau",
+    "search": "Chercher",
+    "export": "Exporter",
+    "import": "Importer",
+    "validate": "Validater",
+    "search": "Chercher...",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "save": "Sauvgarder",
+    "next": "Suivant",
+    "yes": "Oui",
+    "no": "Non",
+    "actions": "Actions",
+    "confirm": "Confirmer",
+    "creation": "Creation",
+    "list": "Liste",
+    "nom": "Nom",
+    "email": "Email",
+    "Données personnelles" : "Données personnelles",
+    "Username" : "Nom d'utilisateur",
+    "Télephone" : "Téléphone",
+    "Nouveau Mot de passe" : "Nouveau mot de passe",
+    "Confirmer votre Mot de passe" : "Confirmez votre mot de passe",
+    "Mot de passe" : "Mot de passe",
+    "prenom": "Prenom",
+    "Changer": "Changer",
+	
+	"actionPermission": {
+    "reference": "Référence",
+    "libelle": "Libellé",
+    "actionPermission": "Permission d'action",
+    "tabPan": "Permission d'action",
+    "header": "Liste des permissions d'action",
+    "deleteActionPermissionConfirmationMessage": "Êtes-vous sûr de vouloir supprimer la permission d'action",
+    "deleteActionPermissionsConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+
+"modelPermissionUser": {
+    "actionPermission": "Permission d'action",
+    "actionPermissionPlaceHolder": "Sélectionner une permission d'action",
+    "actionPermissionPlaceHolderFilter": "Rechercher par permission d'action",
+    "modelPermission": "Permission du modèle",
+    "modelPermissionPlaceHolder": "Sélectionner une permission de modèle",
+    "modelPermissionPlaceHolderFilter": "Rechercher par permission de modèle",
+    "value": "Valeur",
+    "user": "Utilisateur",
+    "userPlaceHolder": "Sélectionner un utilisateur",
+    "userPlaceHolderFilter": "Rechercher par utilisateur",
+    "subAttribute": "Sous-attribut",
+    "modelPermissionUser": "Permission du modèle de l'utilisateur",
+    "tabPan": "Permission du modèle de l'utilisateur",
+    "header": "Liste des permissions du modèle de l'utilisateur",
+    "deleteModelPermissionUserConfirmationMessage": "Êtes-vous sûr de vouloir supprimer la permission du modèle de l'utilisateur",
+    "deleteModelPermissionUsersConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+"role": {
+    "authority": "Autorité",
+    "role": "Rôle",
+    "tabPan": "Rôle",
+    "header": "Liste des rôles",
+    "deleteRoleConfirmationMessage": "Êtes-vous sûr de vouloir supprimer le rôle",
+    "deleteRolesConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+"roleUser": {
+    "role": "Rôle",
+    "rolePlaceHolder": "Sélectionner un rôle",
+    "rolePlaceHolderFilter": "Rechercher par rôle",
+    "user": "Utilisateur",
+    "userPlaceHolder": "Sélectionner un utilisateur",
+    "userPlaceHolderFilter": "Rechercher par utilisateur",
+    "roleUser": "Utilisateur de rôle",
+    "tabPan": "Utilisateur de rôle",
+    "header": "Liste des utilisateurs de rôle",
+    "deleteRoleUserConfirmationMessage": "Êtes-vous sûr de vouloir supprimer l'utilisateur de rôle",
+    "deleteRoleUsersConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+"user": {
+    "credentialsNonExpired": "Credentials non expirés",
+    "enabled": "Activé",
+    "email": "Email",
+    "accountNonExpired": "Compte non expiré",
+    "accountNonLocked": "Compte non verrouillé",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "passwordChanged": "Mot de passe changé",
+    "modelPermissionUsers": "Utilisateurs de permission du modèle",
+    "roleUsers": "Utilisateurs de rôle",
+    "RoleUsersPlaceHolder": "Sélectionner plusieurs rôles",
+    "user": "Utilisateur",
+    "tabPan": "Utilisateur",
+    "header": "Liste des utilisateurs",
+    "deleteUserConfirmationMessage": "Êtes-vous sûr de vouloir supprimer l'utilisateur",
+    "deleteUsersConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+"modelPermission": {
+    "reference": "Référence",
+    "libelle": "Libellé",
+    "modelPermission": "Permission du modèle",
+    "tabPan": "Permission du modèle",
+    "header": "Liste des permissions du modèle",
+    "deleteModelPermissionConfirmationMessage": "Êtes-vous sûr de vouloir supprimer la permission du modèle",
+    "deleteModelPermissionsConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+
+
+    "receptionDetail":{
+        "qte": "Qte",
+        "qteMin": "Qte Min",
+        "qteMax": "Qte Max",
+        "magasin": "Magasin",
+        "magasinPlaceHolder": "Select a Magasin",
+        "magasinPlaceHolderFilter": "Search by Magasin",
+        "produit": "Produit",
+        "produitPlaceHolder": "Select a Produit",
+        "produitPlaceHolderFilter": "Search by Produit",
+        "reception": "Reception",
+        "receptionPlaceHolder": "Select a Reception",
+        "receptionPlaceHolderFilter": "Search by Reception",
+        "receptionDetail": "Reception detail",
+        "tabPan": "Reception detail",
+        "header": "Liste des reception details",
+        "deleteReceptionDetailConfirmationMessage": "Are you sure you want to delete reception detail",
+        "deleteReceptionDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "responsabilite":{
+        "libelle": "Libelle",
+        "code": "Code",
+        "responsabilite": "Responsabilite",
+        "tabPan": "Responsabilite",
+        "header": "Liste des responsabilites",
+        "deleteResponsabiliteConfirmationMessage": "Are you sure you want to delete responsabilite",
+        "deleteResponsabilitesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "typeAchatMateriel":{
+        "libelle": "Libelle",
+        "code": "Code",
+        "typeAchatMateriel": "Type achat materiel",
+        "tabPan": "Type achat materiel",
+        "header": "Liste des type achat materiels",
+        "deleteTypeAchatMaterielConfirmationMessage": "Are you sure you want to delete type achat materiel",
+        "deleteTypeAchatMaterielsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "livraisonDetail":{
+        "qte": "Qte",
+        "qteMin": "Qte Min",
+        "qteMax": "Qte Max",
+        "magasin": "Magasin",
+        "magasinPlaceHolder": "Select a Magasin",
+        "magasinPlaceHolderFilter": "Search by Magasin",
+        "produit": "Produit",
+        "produitPlaceHolder": "Select a Produit",
+        "produitPlaceHolderFilter": "Search by Produit",
+        "livraison": "Livraison",
+        "livraisonPlaceHolder": "Select a Livraison",
+        "livraisonPlaceHolderFilter": "Search by Livraison",
+        "livraisonDetail": "Livraison detail",
+        "tabPan": "Livraison detail",
+        "header": "Liste des livraison details",
+        "deleteLivraisonDetailConfirmationMessage": "Are you sure you want to delete livraison detail",
+        "deleteLivraisonDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "expressionBesoin":{
+        "employe": "Employe",
+        "employePlaceHolder": "Select a Employe",
+        "employePlaceHolderFilter": "Search by Employe",
+        "entiteAdmin": "Entite admin",
+        "entiteAdminPlaceHolder": "Select a Entite admin",
+        "entiteAdminPlaceHolderFilter": "Search by Entite admin",
+        "description": "Description",
+        "dateExpression": "Date expression",
+        "dateExpressionMin": "Date expression Min",
+        "dateExpressionMax": "Date expression Max",
+        "expressionBesoinDetails": "Expression besoin details",
+        "etat": "Etat",
+        "etatPlaceHolder": "Select a Etat",
+        "etatPlaceHolderFilter": "Search by Etat",
+        "expressionBesoin": "Expression besoin",
+        "tabPan": "Expression besoin",
+        "header": "Liste des expression besoins",
+        "deleteExpressionBesoinConfirmationMessage": "Are you sure you want to delete expression besoin",
+        "deleteExpressionBesoinsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "commande":{
+        "ref": "Ref",
+        "total": "Total",
+        "totalMin": "Total Min",
+        "totalMax": "Total Max",
+        "totalPaye": "Total paye",
+        "totalPayeMin": "Total paye Min",
+        "totalPayeMax": "Total paye Max",
+        "dateCommande": "Date commande",
+        "dateCommandeMin": "Date commande Min",
+        "dateCommandeMax": "Date commande Max",
+        "commandeDetails": "Commande details",
+        "entiteAdmin": "Entite admin",
+        "entiteAdminPlaceHolder": "Select a Entite admin",
+        "entiteAdminPlaceHolderFilter": "Search by Entite admin",
+        "commande": "Commande",
+        "tabPan": "Commande",
+        "header": "Liste des commandes",
+        "deleteCommandeConfirmationMessage": "Are you sure you want to delete commande",
+        "deleteCommandesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "employe":{
+        "nom": "Nom",
+        "prenom": "Prenom",
+        "entiteAdmin": "Entite admin",
+        "entiteAdminPlaceHolder": "Select a Entite admin",
+        "entiteAdminPlaceHolderFilter": "Search by Entite admin",
+        "employe": "Employe",
+        "tabPan": "Employe",
+        "header": "Liste des employes",
+        "deleteEmployeConfirmationMessage": "Are you sure you want to delete employe",
+        "deleteEmployesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "expressionBesoinDetail":{
+        "qteDemandee": "Qte demandee",
+        "qteDemandeeMin": "Qte demandee Min",
+        "qteDemandeeMax": "Qte demandee Max",
+        "qteAccordee": "Qte accordee",
+        "qteAccordeeMin": "Qte accordee Min",
+        "qteAccordeeMax": "Qte accordee Max",
+        "qteLivre": "Qte livre",
+        "qteLivreMin": "Qte livre Min",
+        "qteLivreMax": "Qte livre Max",
+        "expressionBesoin": "Expression besoin",
+        "expressionBesoinPlaceHolder": "Select a Expression besoin",
+        "expressionBesoinPlaceHolderFilter": "Search by Expression besoin",
+        "produit": "Produit",
+        "produitPlaceHolder": "Select a Produit",
+        "produitPlaceHolderFilter": "Search by Produit",
+        "expressionBesoinDetail": "Expression besoin detail",
+        "tabPan": "Expression besoin detail",
+        "header": "Liste des expression besoin details",
+        "deleteExpressionBesoinDetailConfirmationMessage": "Are you sure you want to delete expression besoin detail",
+        "deleteExpressionBesoinDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "budget":{
+        "dateBudget": "Date budget",
+        "dateBudgetMin": "Date budget Min",
+        "dateBudgetMax": "Date budget Max",
+        "montant": "Montant",
+        "montantMin": "Montant Min",
+        "montantMax": "Montant Max",
+        "montantInvestissement": "Montant investissement",
+        "montantInvestissementMin": "Montant investissement Min",
+        "montantInvestissementMax": "Montant investissement Max",
+        "montantFonction": "Montant fonction",
+        "montantFonctionMin": "Montant fonction Min",
+        "montantFonctionMax": "Montant fonction Max",
+        "budgetEntiteAdmins": "Budget entite admins",
+        "budget": "Budget",
+        "tabPan": "Budget",
+        "header": "Liste des budgets",
+        "deleteBudgetConfirmationMessage": "Are you sure you want to delete budget",
+        "deleteBudgetsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "achatMateriel":{
+        "budget": "Budget",
+        "budgetPlaceHolder": "Select a Budget",
+        "budgetPlaceHolderFilter": "Search by Budget",
+        "montantTotal": "Montant total",
+        "montantTotalMin": "Montant total Min",
+        "montantTotalMax": "Montant total Max",
+        "dateAchat": "Date achat",
+        "dateAchatMin": "Date achat Min",
+        "dateAchatMax": "Date achat Max",
+        "typeAchatMateriel": "Type achat materiel",
+        "typeAchatMaterielPlaceHolder": "Select a Type achat materiel",
+        "typeAchatMaterielPlaceHolderFilter": "Search by Type achat materiel",
+        "achatMaterielDetails": "Achat materiel details",
+        "achatMateriel": "Achat materiel",
+        "tabPan": "Achat materiel",
+        "header": "Liste des achat materiels",
+        "deleteAchatMaterielConfirmationMessage": "Are you sure you want to delete achat materiel",
+        "deleteAchatMaterielsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "mandat":{
+        "employe": "Employe",
+        "employePlaceHolder": "Select a Employe",
+        "employePlaceHolderFilter": "Search by Employe",
+        "dateDebut": "Date debut",
+        "dateDebutMin": "Date debut Min",
+        "dateDebutMax": "Date debut Max",
+        "dateFin": "Date fin",
+        "dateFinMin": "Date fin Min",
+        "dateFinMax": "Date fin Max",
+        "responsabilite": "Responsabilite",
+        "responsabilitePlaceHolder": "Select a Responsabilite",
+        "responsabilitePlaceHolderFilter": "Search by Responsabilite",
+        "entiteAdmin": "Entite admin",
+        "entiteAdminPlaceHolder": "Select a Entite admin",
+        "entiteAdminPlaceHolderFilter": "Search by Entite admin",
+        "mandat": "Mandat",
+        "tabPan": "Mandat",
+        "header": "Liste des mandats",
+        "deleteMandatConfirmationMessage": "Are you sure you want to delete mandat",
+        "deleteMandatsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "etat":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "etat": "Etat",
+        "tabPan": "Etat",
+        "header": "Liste des etats",
+        "deleteEtatConfirmationMessage": "Are you sure you want to delete etat",
+        "deleteEtatsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "budgetCompteBudgetaire":{
+        "budget": "Budget",
+        "budgetPlaceHolder": "Select a Budget",
+        "budgetPlaceHolderFilter": "Search by Budget",
+        "compteBudgetaire": "Compte budgetaire",
+        "compteBudgetairePlaceHolder": "Select a Compte budgetaire",
+        "compteBudgetairePlaceHolderFilter": "Search by Compte budgetaire",
+        "montant": "Montant",
+        "montantMin": "Montant Min",
+        "montantMax": "Montant Max",
+        "budgetCompteBudgetaire": "Budget compte budgetaire",
+        "tabPan": "Budget compte budgetaire",
+        "header": "Liste des budget compte budgetaires",
+        "deleteBudgetCompteBudgetaireConfirmationMessage": "Are you sure you want to delete budget compte budgetaire",
+        "deleteBudgetCompteBudgetairesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "magasin":{
+        "code": "Code",
+        "adresse": "Adresse",
+        "magasin": "Magasin",
+        "tabPan": "Magasin",
+        "header": "Liste des magasins",
+        "deleteMagasinConfirmationMessage": "Are you sure you want to delete magasin",
+        "deleteMagasinsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "responsableInventaire":{
+        "nom": "Nom",
+        "prenom": "Prenom",
+        "login": "Login",
+        "mdp": "Mdp",
+        "responsableInventaire": "Responsable inventaire",
+        "tabPan": "Responsable inventaire",
+        "header": "Liste des responsable inventaires",
+        "deleteResponsableInventaireConfirmationMessage": "Are you sure you want to delete responsable inventaire",
+        "deleteResponsableInventairesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "entiteAdmin":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "employe": "Employe",
+        "entiteAdmin": "Entite admin",
+        "tabPan": "Entite admin",
+        "header": "Liste des entite admins",
+        "deleteEntiteAdminConfirmationMessage": "Are you sure you want to delete entite admin",
+        "deleteEntiteAdminsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "inventaireDetail":{
+        "qteCalculee": "Qte calculee",
+        "qteCalculeeMin": "Qte calculee Min",
+        "qteCalculeeMax": "Qte calculee Max",
+        "qteStock": "Qte stock",
+        "qteStockMin": "Qte stock Min",
+        "qteStockMax": "Qte stock Max",
+        "ecart": "Ecart",
+        "ecartMin": "Ecart Min",
+        "ecartMax": "Ecart Max",
+        "magasin": "Magasin",
+        "produit": "Produit",
+        "produitPlaceHolder": "Select a Produit",
+        "produitPlaceHolderFilter": "Search by Produit",
+        "inventaire": "Inventaire",
+        "inventairePlaceHolder": "Select a Inventaire",
+        "inventairePlaceHolderFilter": "Search by Inventaire",
+        "inventaireDetail": "Inventaire detail",
+        "tabPan": "Inventaire detail",
+        "header": "Liste des inventaire details",
+        "deleteInventaireDetailConfirmationMessage": "Are you sure you want to delete inventaire detail",
+        "deleteInventaireDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "inventaire":{
+        "dateDebut": "Date debut",
+        "dateDebutMin": "Date debut Min",
+        "dateDebutMax": "Date debut Max",
+        "dateFin": "Date fin",
+        "dateFinMin": "Date fin Min",
+        "dateFinMax": "Date fin Max",
+        "responsableInv": "Responsable inv",
+        "responsableInvPlaceHolder": "Select a Responsable inv",
+        "responsableInvPlaceHolderFilter": "Search by Responsable inv",
+        "inventaireDetails": "Inventaire details",
+        "inventaire": "Inventaire",
+        "tabPan": "Inventaire",
+        "header": "Liste des inventaires",
+        "deleteInventaireConfirmationMessage": "Are you sure you want to delete inventaire",
+        "deleteInventairesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "categorieProduit":{
+        "libelle": "Libelle",
+        "code": "Code",
+        "compteBudgetaire": "Compte budgetaire",
+        "compteBudgetairePlaceHolder": "Select a Compte budgetaire",
+        "compteBudgetairePlaceHolderFilter": "Search by Compte budgetaire",
+        "categorieProduit": "Categorie produit",
+        "tabPan": "Categorie produit",
+        "header": "Liste des categorie produits",
+        "deleteCategorieProduitConfirmationMessage": "Are you sure you want to delete categorie produit",
+        "deleteCategorieProduitsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "stock":{
+        "qte": "Qte",
+        "qteMin": "Qte Min",
+        "qteMax": "Qte Max",
+        "qteDeffectueuse": "Qte deffectueuse",
+        "qteDeffectueuseMin": "Qte deffectueuse Min",
+        "qteDeffectueuseMax": "Qte deffectueuse Max",
+        "magasin": "Magasin",
+        "magasinPlaceHolder": "Select a Magasin",
+        "magasinPlaceHolderFilter": "Search by Magasin",
+        "produit": "Produit",
+        "produitPlaceHolder": "Select a Produit",
+        "produitPlaceHolderFilter": "Search by Produit",
+        "stock": "Stock",
+        "tabPan": "Stock",
+        "header": "Liste des stocks",
+        "deleteStockConfirmationMessage": "Are you sure you want to delete stock",
+        "deleteStocksConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "commandeDetail":{
+        "prix": "Prix",
+        "prixMin": "Prix Min",
+        "prixMax": "Prix Max",
+        "qte": "Qte",
+        "qteMin": "Qte Min",
+        "qteMax": "Qte Max",
+        "commande": "Commande",
+        "commandePlaceHolder": "Select a Commande",
+        "commandePlaceHolderFilter": "Search by Commande",
+        "produit": "Produit",
+        "produitPlaceHolder": "Select a Produit",
+        "produitPlaceHolderFilter": "Search by Produit",
+        "commandeDetail": "Commande detail",
+        "tabPan": "Commande detail",
+        "header": "Liste des commande details",
+        "deleteCommandeDetailConfirmationMessage": "Are you sure you want to delete commande detail",
+        "deleteCommandeDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "reception":{
+        "ref": "Ref",
+        "dateReception": "Date reception",
+        "dateReceptionMin": "Date reception Min",
+        "dateReceptionMax": "Date reception Max",
+        "libelle": "Libelle",
+        "commande": "Commande",
+        "commandePlaceHolder": "Select a Commande",
+        "commandePlaceHolderFilter": "Search by Commande",
+        "receptionDetails": "Reception details",
+        "reception": "Reception",
+        "tabPan": "Reception",
+        "header": "Liste des receptions",
+        "deleteReceptionConfirmationMessage": "Are you sure you want to delete reception",
+        "deleteReceptionsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "operationStock":{
+        "ref": "Ref",
+        "dateOS": "Date o s",
+        "dateOSMin": "Date o s Min",
+        "dateOSMax": "Date o s Max",
+        "discription": "Discription",
+        "magasinSource": "Magasin source",
+        "magasinSourcePlaceHolder": "Select a Magasin source",
+        "magasinSourcePlaceHolderFilter": "Search by Magasin source",
+        "magasinDest": "Magasin dest",
+        "magasinDestPlaceHolder": "Select a Magasin dest",
+        "magasinDestPlaceHolderFilter": "Search by Magasin dest",
+        "operationStockDetails": "Operation stock details",
+        "operationStock": "Operation stock",
+        "tabPan": "Operation stock",
+        "header": "Liste des operation stocks",
+        "deleteOperationStockConfirmationMessage": "Are you sure you want to delete operation stock",
+        "deleteOperationStocksConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "budgetEntiteAdmin":{
+        "entiteAdmin": "Entite admin",
+        "entiteAdminPlaceHolder": "Select a Entite admin",
+        "entiteAdminPlaceHolderFilter": "Search by Entite admin",
+        "montantEntite": "Montant entite",
+        "montantEntiteMin": "Montant entite Min",
+        "montantEntiteMax": "Montant entite Max",
+        "montantInvEntite": "Montant inv entite",
+        "montantInvEntiteMin": "Montant inv entite Min",
+        "montantInvEntiteMax": "Montant inv entite Max",
+        "montantFctEntite": "Montant fct entite",
+        "montantFctEntiteMin": "Montant fct entite Min",
+        "montantFctEntiteMax": "Montant fct entite Max",
+        "budget": "Budget",
+        "budgetPlaceHolder": "Select a Budget",
+        "budgetPlaceHolderFilter": "Search by Budget",
+        "budgetEntiteAdmin": "Budget entite admin",
+        "tabPan": "Budget entite admin",
+        "header": "Liste des budget entite admins",
+        "deleteBudgetEntiteAdminConfirmationMessage": "Are you sure you want to delete budget entite admin",
+        "deleteBudgetEntiteAdminsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "compteBudgetaire":{
+        "libelle": "Libelle",
+        "code": "Code",
+        "montantMax": "Montant max",
+        "montantMaxMin": "Montant max Min",
+        "montantMaxMax": "Montant max Max",
+        "compteBudgetaire": "Compte budgetaire",
+        "tabPan": "Compte budgetaire",
+        "header": "Liste des compte budgetaires",
+        "deleteCompteBudgetaireConfirmationMessage": "Are you sure you want to delete compte budgetaire",
+        "deleteCompteBudgetairesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "produit":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "categorieProduit": "Categorie produit",
+        "categorieProduitPlaceHolder": "Select a Categorie produit",
+        "categorieProduitPlaceHolderFilter": "Search by Categorie produit",
+        "produit": "Produit",
+        "tabPan": "Produit",
+        "header": "Liste des produits",
+        "deleteProduitConfirmationMessage": "Are you sure you want to delete produit",
+        "deleteProduitsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "livraison":{
+        "ref": "Ref",
+        "datelivraison": "Datelivraison",
+        "datelivraisonMin": "Datelivraison Min",
+        "datelivraisonMax": "Datelivraison Max",
+        "reception": "Reception",
+        "receptionPlaceHolder": "Select a Reception",
+        "receptionPlaceHolderFilter": "Search by Reception",
+        "livraisonDetails": "Livraison details",
+        "livraison": "Livraison",
+        "tabPan": "Livraison",
+        "header": "Liste des livraisons",
+        "deleteLivraisonConfirmationMessage": "Are you sure you want to delete livraison",
+        "deleteLivraisonsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "achatMaterielDetail":{
+        "produit": "Produit",
+        "produitPlaceHolder": "Select a Produit",
+        "produitPlaceHolderFilter": "Search by Produit",
+        "qteAchetee": "Qte achetee",
+        "qteAcheteeMin": "Qte achetee Min",
+        "qteAcheteeMax": "Qte achetee Max",
+        "qteRecue": "Qte recue",
+        "qteRecueMin": "Qte recue Min",
+        "qteRecueMax": "Qte recue Max",
+        "qteLivree": "Qte livree",
+        "qteLivreeMin": "Qte livree Min",
+        "qteLivreeMax": "Qte livree Max",
+        "achatMateriel": "Achat materiel",
+        "achatMaterielPlaceHolder": "Select a Achat materiel",
+        "achatMaterielPlaceHolderFilter": "Search by Achat materiel",
+        "achatMaterielDetail": "Achat materiel detail",
+        "tabPan": "Achat materiel detail",
+        "header": "Liste des achat materiel details",
+        "deleteAchatMaterielDetailConfirmationMessage": "Are you sure you want to delete achat materiel detail",
+        "deleteAchatMaterielDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "operationStockDetail":{
+        "qte": "Qte",
+        "qteMin": "Qte Min",
+        "qteMax": "Qte Max",
+        "produit": "Produit",
+        "produitPlaceHolder": "Select a Produit",
+        "produitPlaceHolderFilter": "Search by Produit",
+        "operationStock": "Operation stock",
+        "operationStockPlaceHolder": "Select a Operation stock",
+        "operationStockPlaceHolderFilter": "Search by Operation stock",
+        "operationStockDetail": "Operation stock detail",
+        "tabPan": "Operation stock detail",
+        "header": "Liste des operation stock details",
+        "deleteOperationStockDetailConfirmationMessage": "Are you sure you want to delete operation stock detail",
+        "deleteOperationStockDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+"appName": "GED"
+}
+
+

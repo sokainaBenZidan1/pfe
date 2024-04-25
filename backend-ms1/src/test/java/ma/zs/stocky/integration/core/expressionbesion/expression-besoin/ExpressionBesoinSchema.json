@@ -1,0 +1,35 @@
+{
+    "employe": {"id": "#number"},
+    "entiteAdmin": {"id": "#number"},
+    "description": "#string",
+    "etat": {"id": "#number"},
+
+    "expressionBesoinDetails": [
+      {
+        "qteDemandee":"#number",}
+        "qteAccordee":"#number",}
+        "qteLivre":"#number",}
+        "produit":{"id": "#number"}}
+      },
+      {
+        "qteDemandee":"#number",}
+        "qteAccordee":"#number",}
+        "qteLivre":"#number",}
+        "produit":{"id": "#number"}}
+      },
+      {
+        "qteDemandee":"#number",}
+        "qteAccordee":"#number",}
+        "qteLivre":"#number",}
+        "produit":{"id": "#number"}}
+      }
+    ]
+}
+
+
+
+
+
+
+
+
